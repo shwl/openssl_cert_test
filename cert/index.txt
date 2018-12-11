@@ -37,3 +37,4 @@ V	971015004448Z		0119	unknown	/C=AU/SP=Queensland/O=Mincom Pty Ltd/OU=MTR/CN=tes
 V	971016035001Z		011A	unknown	/C=AU/SP=Queensland/O=Mincom Pty Ltd/OU=MTR/CN=test64
 V	971016080129Z		011B	unknown	/C=FR/O=ALCATEL/OU=Alcatel Mobile Phones/CN=bourque/Email=bourque@art.alcatel.fr
 V	971016224000Z		011D	unknown	/L=Bedford/O=Cranfield University/OU=Computer Centre/CN=Peter R Lister/Email=P.Lister@cranfield.ac.uk
+V	481203091840Z		011E	unknown	/C=CN/O=\xE6\xB5\x99\xE6\xB1\x9F\xE7\x9C\x81\xE6\x95\xB0\xE5\xAD\x97\xE8\xAE\xA4\xE8\xAF\x81\xE4\xB8\xAD\xE5\xBF\x83/CN=ZJCA/L=\xE6\x9D\xAD\xE5\xB7\x9E\xE5\xB8\x82/ST=\xE6\xB5\x99\xE6\xB1\x9F\xE7\x9C\x81
