@@ -6,7 +6,7 @@
 # is undefined.
 HOME			= .
 RANDFILE		= $ENV::HOME/.rnd
-CN			= "ZJRoot"
+CN			= "测试证书Test001"
 O			= "浙江省数字认证中心"
 L			= "杭州市"
 S			= "浙江省"
@@ -42,7 +42,7 @@ commonName			= $ENV::CN
 # certificate
 
 basicConstraints=critical, CA:FALSE
-keyUsage=critical, nonRepudiation, digitalSignature, keyEncipherment
+keyUsage=critical, nonRepudiation, digitalSignature, keyEncipherment, keyAgreement
 
 # PKIX recommendations harmless if included in all certificates.
 subjectKeyIdentifier=hash
