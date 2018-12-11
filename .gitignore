@@ -2,3 +2,10 @@
 *.pfx
 *.cer
 *.spc
+*.key
+*.pem
+*.crt
+*.csr
+*.old
+*.attr
+*.rnd
