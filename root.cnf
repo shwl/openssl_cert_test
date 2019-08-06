@@ -6,8 +6,8 @@
 # is undefined.
 HOME			= .
 RANDFILE		= $ENV::HOME/.rnd
-CN			= "ZJRoot"
-O			= "浙江省数字认证中心"
+CN			= "TGRoot_01"
+O			= "杭州天谷信息科技有限公司(客户端测试)"
 L			= "杭州市"
 S			= "浙江省"
 C			= "CN"
@@ -15,7 +15,7 @@ default_ca		= ca
 
 ####################################################################
 [ req ]
-default_bits		= 2048
+default_bits		= 4096
 default_keyfile 	= privkey.pem
 # Don't prompt for fields: use those in section directly
 prompt			= no

@@ -18,10 +18,10 @@ ren ca.pfx					ca_%y%%m%%d%_%h%%mm%.pfx
 cd ..
 
 rem 生成私玥;
-openssl genrsa -aes256 -passout pass:111111 -out cert\ca_rsa_private.key 1024
+openssl genrsa -aes256 -passout pass:111111 -out cert\ca_rsa_private.key 4096
 
 rem 生成证书请求;
-openssl req -utf8 -new -days 10950 -sha1 -key cert\ca_rsa_private.key -passin pass:111111 -out cert\ca_cert.csr -config ca.cnf
+openssl req -utf8 -new -days 10950 -sha256 -key cert\ca_rsa_private.key -passin pass:111111 -out cert\ca_cert.csr -config ca.cnf
 
 rem 根证书签发下级证书;
 openssl ca -utf8 -extensions v3_ca -in cert\ca_cert.csr -config ca.cnf -days 10950 -out cert\ca_cert.crt -cert cert\root_cert.crt -keyfile cert\root_rsa_private.key -passin pass:111111 -batch

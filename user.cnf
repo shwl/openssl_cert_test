@@ -6,8 +6,8 @@
 # is undefined.
 HOME			= .
 RANDFILE		= $ENV::HOME/.rnd
-CN			= "测试证书Test001"
-O			= "浙江省数字认证中心"
+CN			= "localhost"
+O			= "杭州天谷信息科技有限公司(客户端测试)"
 L			= "杭州市"
 S			= "浙江省"
 C			= "CN"
