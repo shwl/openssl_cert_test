@@ -19,12 +19,15 @@ ren server.csr			server_%y%%m%%d%_%h%%mm%.csr
 cd ..
 
 rem 生成私玥;
-openssl genrsa -aes256 -passout pass:111111 -out cert\server.key 1024
+openssl genrsa -aes256 -passout pass:111111 -out cert\server.pem 2048
+
+rem 制作解密后的证书私钥;
+openssl rsa -in cert\server.pem -passin pass:111111 -out cert\server.key
 
 rem 生成服务器证书签发申请;
-openssl req -new -key cert/server.key -out cert/server.csr -subj "/C=CN/ST=ZJ/L=HZ/0=timevale_test/OU=timevale_test/CN=www.tsign.cn"
+openssl req -new -key cert/server.pem -passin pass:111111 -out cert/server.csr -subj "/C=CN/ST=ZJ/L=HZ/0=杭州天谷信息科技有限公司(客户端测试)/OU=TGClientServer/CN=192.168.120.238"
 
 rem 签发服务器证书;
-openssl x509 -req -days 18250 -sha256 -extensions v3_req -CA cert\ca_cert.cer -CAkey cert\ca_rsa_private.key -passin pass:111111 -CAserial ca_cert.srl -CAcreateserial -in cert/server.csr -out cert/server.cer
+openssl ca -policy policy_anything -days 18250 -cert cert/ca_cert.crt -keyfile cert/ca_rsa_private.key  -passin pass:111111 -in cert/server.csr -out cert/server.crt
 
 pause
