@@ -25,9 +25,9 @@ rem 制作解密后的证书私钥;
 openssl rsa -in cert\server.pem -passin pass:111111 -out cert\server.key
 
 rem 生成服务器证书签发申请;
-openssl req -new -key cert/server.pem -passin pass:111111 -out cert/server.csr -subj "/C=CN/ST=ZJ/L=HZ/0=杭州天谷信息科技有限公司(客户端测试)/OU=TGClientServer/CN=127.0.0.1"
+openssl req -utf8 -new -key cert/server.pem -passin pass:111111 -out cert/server.csr -config server2.cnf -extensions req_ext
 
 rem 签发服务器证书;
-openssl ca -policy policy_anything -days 18250 -cert cert/root_cert.crt -keyfile cert/root_rsa_private.key  -passin pass:111111 -in cert/server.csr -out cert/server.crt
+openssl ca -policy policy_anything -days 18250 -cert cert/root_cert.crt -keyfile cert/root_rsa_private.key  -passin pass:111111 -in cert/server.csr -out cert/server.crt -extensions req_ext -extfile server2.cnf
 
 pause
